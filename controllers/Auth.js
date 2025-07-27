@@ -102,7 +102,7 @@ exports.login = async (req,res) => {
                 httpOnly:true,
             }
 
-            res.cookie("babbarCookie", token, options).status(200).json({
+            res.cookie("UmeshCookie", token, options).status(200).json({
                 success:true,
                 token,
                 user,
