@@ -4,7 +4,9 @@ const app = express();
 require('dotenv').config();
 const PORT = process.env.PORT || 4000;
 
-//cookie-parser - what is this and why we need this ?
+//cookie-parser
+const cookieParser = require("cookie-parser");
+app.use(cookieParser());
 
 app.use(express.json());
 

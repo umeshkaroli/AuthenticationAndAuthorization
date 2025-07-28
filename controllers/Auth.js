@@ -92,13 +92,12 @@ exports.login = async (req,res) => {
                                 });
 
                                 
-
             user = user.toObject();
             user.token = token;
             user.password = undefined;
 
             const options = {
-                expires: new Date( Date.now() + 3 * 24 * 60 * 60 * 1000),
+                expires: new Date( Date.now() + 360 * 60 * 1000), // 1 hour
                 httpOnly:true,
             }
 
